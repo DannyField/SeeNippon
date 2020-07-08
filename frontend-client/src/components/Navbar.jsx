@@ -8,6 +8,8 @@ class Navbar extends React.Component {
         <Link to="/">Home</Link>
         <Link to="/blogs">All Blogs</Link>
         <Link to="/blogs/create">Create A Blog</Link>
+        <Link to="/login">Login</Link>
+        <Link to="/sign-up">Sign Up</Link>
       </nav>
     );
   }
