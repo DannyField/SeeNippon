@@ -16,11 +16,16 @@ class Blog extends React.Component {
     return (
       <div>
         <h1>{b.title}</h1>
+        <h3>{b.city}</h3>
+        <h2>{b.prefecture} prefecture</h2>
+        <p>{b.description}</p>
+        <h1>{b.image}</h1>
+
         <button onClick={this.props.history.goBack}>Back</button>
         <Link to={`/blogs/${b.id}/edit`}>
           <button>Edit</button>
         </Link>
-        <span onClick={() => this.deleteThing(b.id)}>
+        <span onClick={() => this.deleteBlog(b.id)}>
           <button>Delete</button>
         </span>
       </div>
