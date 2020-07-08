@@ -1,5 +1,5 @@
 import React from "react";
-import { render } from "react-dom";
+import "../stylesheets/Form.css";
 
 class EditBlog extends React.Component {
   state = {
@@ -104,7 +104,7 @@ class EditBlog extends React.Component {
               value={title}
             />
 
-            <label htmlFor="description">Description</label>
+            <label htmlFor="description">Blog Post</label>
             <textarea
               type="text"
               name="title"

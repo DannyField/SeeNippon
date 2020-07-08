@@ -14,10 +14,10 @@ class App extends React.Component {
       <>
         <Navbar />
         <Switch>
-          <Route exact path="/blogs/:id/edit" component={EditBlog} />
-          <Route exact path="/blogs" component={Blogs} />
-          <Route exact path="/blogs/:id" component={Blog} />
           <Route exact path="/blogs/create" component={CreateBlog} />
+          <Route exact path="/blogs/:id/edit" component={EditBlog} />
+          <Route exact path="/blogs/:id" component={Blog} />
+          <Route exact path="/blogs" component={Blogs} />
           <Route exact path="/" component={Home} />
           <Route component={NoMatch} />
         </Switch>
