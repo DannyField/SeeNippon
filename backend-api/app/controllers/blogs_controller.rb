@@ -11,7 +11,7 @@ class BlogsController < ApplicationController
   end
 
   def create 
-    blogs.create(blog_params)
+    Blog.create(blog_params)
     render json: "Blog Post Created", status: 201
   end
 
