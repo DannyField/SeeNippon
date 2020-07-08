@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 class Blogs extends React.Component {
   state = { blogs: [] };
@@ -6,8 +7,8 @@ class Blogs extends React.Component {
   getBlogs = async () => {
     const response = await fetch("http://localhost:3000/blogs/");
     const data = await response.json();
-    this.setState({ blog: data });
-    console.log(data);
+    this.setState({ blogs: data });
+    console.log(this.state);
   };
 
   renderBlogs = () => {
@@ -17,6 +18,9 @@ class Blogs extends React.Component {
           <p>Prefecture</p>
           <h1>{blogs.title}</h1>
           <p>{blogs.city}</p>
+          <Link to={{ pathname: `/blogs/${blogs.id}`, state: blogs }}>
+            <button>Show</button>
+          </Link>
         </div>
       );
     });
@@ -25,7 +29,7 @@ class Blogs extends React.Component {
   render() {
     return (
       <div>
-        <h1>Stuff</h1>
+        <h1>Handy Tips!</h1>
         {this.renderBlogs()}
       </div>
     );
