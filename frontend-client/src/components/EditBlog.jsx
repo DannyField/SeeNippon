@@ -15,7 +15,7 @@ class EditBlog extends React.Component {
     id: this.props.match.params.id,
   };
   onInputChange = (event) => {
-    this.setStage({
+    this.setState({
       [event.target.id]: event.target.value,
     });
   };

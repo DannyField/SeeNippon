@@ -19,6 +19,7 @@ class Blog extends React.Component {
         <h3>{b.city}</h3>
         <h2>{b.prefecture} prefecture</h2>
         <p>{b.description}</p>
+        <img src={b.image} alt="blog post photograph"/>
         <h1>{b.image}</h1>
 
         <button onClick={this.props.history.goBack}>Back</button>
