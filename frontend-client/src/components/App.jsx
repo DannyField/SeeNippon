@@ -7,6 +7,9 @@ import EditBlog from "./EditBlog";
 import Home from "./Home";
 import Blog from "./Blog";
 import NoMatch from "./NoMatch";
+import ProtectedRoutes from "./ProtectedRoutes";
+import Login from "./Login";
+import SignUp from "./SignUp";
 
 class App extends React.Component {
   render() {
@@ -18,6 +21,8 @@ class App extends React.Component {
           <Route exact path="/blogs/:id/edit" component={EditBlog} />
           <Route exact path="/blogs/:id" component={Blog} />
           <Route exact path="/blogs" component={Blogs} />
+          <Route exact path="/login" component={Login} />
+          <Route exact path="/sign-up" component={SignUp} />
           <Route exact path="/" component={Home} />
           <Route component={NoMatch} />
         </Switch>
