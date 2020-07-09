@@ -37,6 +37,7 @@ Blog.create(
     tipOne: 'Make sure to get a phone SIM before arriving in Japan', 
     tipTwo: 'Learning some basic Japanese will make travelling much easier', 
     tipThree: 'Look for the small coffee shop on the corner. Has nice brewed coffee',
+    user_id: 1
 )
 
 Blog.create(
@@ -50,6 +51,7 @@ Blog.create(
     tipOne: 'There are no buses along the melody road so find a local to take you there', 
     tipTwo: 'Learning some basic Japanese will make travelling much easier', 
     tipThree: "Watch out for the naughty goat on the mountain and don't let him inside",
+    user_id: 1
 )
 
 Blog.create(
@@ -63,6 +65,7 @@ Blog.create(
     tipOne: 'Watch out for men and women wanting to buy you drinks', 
     tipTwo: 'Learning some basic Japanese will make travelling much easier', 
     tipThree: 'If you visit the deer at Nara, bow and they may bow back to you',
+    user_id: 1
 )
 
 Blog.create(
@@ -76,6 +79,7 @@ Blog.create(
     tipOne: 'Go to Nakano for cheap camera gear', 
     tipTwo: "Don't forget to get a JR Rail Pass", 
     tipThree: "Sometimes resturants will close for a few hours after lunch",
+    user_id: 1
 )
 
 puts 'completed post'
