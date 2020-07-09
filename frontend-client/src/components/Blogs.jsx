@@ -18,9 +18,10 @@ class Blogs extends React.Component {
   renderBlogs = () => {
     return this.state.blogs.map((blogs, index) => {
       return (
-        <div key={index}>
+        <div className="blog-index" key={index}>
           <h3>{blogs.title}</h3>
           <p>{blogs.city}</p>
+          <img className="index-image" src={blogs.image} alt="blog post photograph"/>
           <Link to={{ pathname: `/blogs/${blogs.id}`, state: blogs }}>
             <button>Show</button>
           </Link>
@@ -33,7 +34,7 @@ class Blogs extends React.Component {
   render() {
     return (
       <div>
-        <h1>Handy Tips!</h1>
+        {/* <h1>Handy Tips!</h1> */}
         {this.renderBlogs()}
       </div>
     );

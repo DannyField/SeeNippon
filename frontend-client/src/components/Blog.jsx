@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import '../stylesheets/BlogIndex.css';
 
 class Blog extends React.Component {
   deleteBlog = async (id) => {

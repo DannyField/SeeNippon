@@ -26,10 +26,6 @@ form textarea {
   height: 80px;
 }
 
-.form-container-blog {
-
-}
-
 .blog-form {
   display: flex;
   flex-direction: column;
