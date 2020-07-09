@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Card from "./Card";
 
 class Blogs extends React.Component {
   state = { blogs: [] };
@@ -33,6 +34,7 @@ class Blogs extends React.Component {
     return (
       <div className="blog-index-container">
         {this.renderBlogs()}
+        <Card />
       </div>
     );
   }
