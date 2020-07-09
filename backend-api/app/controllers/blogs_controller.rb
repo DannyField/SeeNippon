@@ -1,4 +1,5 @@
 class BlogsController < ApplicationController
+  before_action :authenticate_user, only: [:create, :update, :destroy]
   before_action :set_blog, only: [:show, :update, :destroy]
 
   def index 
@@ -11,8 +12,8 @@ class BlogsController < ApplicationController
   end
 
   def create 
-    Blog.create(blog_params)
-    render json: "Blog Post Created", status: 201
+    current_user.blogs.create(blog_params)
+    render json: "Blog Post Created", status: :created
   end
 
   def update 

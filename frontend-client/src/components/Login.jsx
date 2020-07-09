@@ -21,6 +21,7 @@ class Login extends React.Component {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          "Authorization": `Bearer ${localStorage.getItem('token')}`
         },
         body: JSON.stringify(body),
       });
@@ -29,7 +30,7 @@ class Login extends React.Component {
       } else {
         const { jwt } = await response.json();
         localStorage.setItem("token", jwt);
-        this.props.history.push("/home");
+        this.props.history.push("/");
       }
     } catch (err) {
       this.setState({
@@ -42,10 +43,11 @@ class Login extends React.Component {
     const { email, password, errMessage } = this.state;
     return (
       <div className="form-container">
-        <h1>Login</h1>
         {errMessage && <span>{errMessage}</span>}
         <form onSubmit={this.onFormSubmit}>
-          <label htmlFor="email">Email</label>
+        <h1>Login</h1>
+        <br/>
+          <label htmlFor="email">Email Address:</label>
           <input
             type="email"
             name="email"
@@ -61,6 +63,7 @@ class Login extends React.Component {
             value={password}
             onChange={this.onInputChange}
           />
+          <br/>
           <input type="submit" value="Submit" />
         </form>
       </div>

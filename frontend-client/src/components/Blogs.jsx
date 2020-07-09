@@ -5,7 +5,11 @@ class Blogs extends React.Component {
   state = { blogs: [] };
 
   getBlogs = async () => {
-    const response = await fetch("http://localhost:3000/blogs/");
+    const response = await fetch("http://localhost:3000/blogs/", {
+      headers: {
+        'Authorization': `Bearer ${localStorage.getItem('token')}`
+      }
+    });
     const data = await response.json();
     this.setState({ blogs: data });
     console.log(this.state);
@@ -14,13 +18,11 @@ class Blogs extends React.Component {
   renderBlogs = () => {
     return this.state.blogs.map((blogs, index) => {
       return (
-        <div key={index}>
-          <p>Prefecture</p>
-          <h1>{blogs.title}</h1>
-          <p>{blogs.city}</p>
-          <Link to={{ pathname: `/blogs/${blogs.id}`, state: blogs }}>
-            <button>Show</button>
-            <p>{blogs.image}</p>
+        <div className="blog-index" key={index}>
+          <Link to={{ pathname: `/blogs/${blogs.id}`, state: blogs }}>          
+          <h3 className="blog-index-title">{blogs.title}</h3>
+          <p>City: {blogs.city} | Prefecture: {blogs.prefecture}</p>
+          <img className="index-image" src={blogs.image} alt="blog post photograph"/>
           </Link>
         </div>
       );
@@ -29,8 +31,7 @@ class Blogs extends React.Component {
 
   render() {
     return (
-      <div>
-        <h1>Handy Tips!</h1>
+      <div className="blog-index-container">
         {this.renderBlogs()}
       </div>
     );

@@ -15,7 +15,7 @@ class EditBlog extends React.Component {
     id: this.props.match.params.id,
   };
   onInputChange = (event) => {
-    this.setStage({
+    this.setState({
       [event.target.id]: event.target.value,
     });
   };
@@ -37,6 +37,7 @@ class EditBlog extends React.Component {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
+        Authorization: `Bearer ${localStorage.getItem("token")}`,
       },
       body: JSON.stringify({
         title,
@@ -49,12 +50,17 @@ class EditBlog extends React.Component {
         tipThree,
       }),
     });
+    window.alert("Blog Details Updated");
     this.props.history.push("/blogs");
   };
 
   async componentDidMount() {
     const { id } = this.state;
-    const response = await fetch(`http://localhost:3000/blogs/${id}`);
+    const response = await fetch(`http://localhost:3000/blogs/${id}`, {
+      headers: {
+        Authorization: `Bearer ${localStorage.getItem("token")}`,
+      },
+    });
     const {
       title,
       description,
@@ -92,11 +98,13 @@ class EditBlog extends React.Component {
     } = this.state;
     return (
       !loading && (
-        <div className="form-container">
-          <h1>Onegaishimasu Edit Your Blog</h1>
-          <form onSubmit={this.onFormSubmit}>
+        <div className="form-container-blog">
+          <form className="blog-form" onSubmit={this.onFormSubmit}>
+            <h1>Onegaishimasu</h1>
+            <h3>Edit Your Blog</h3>
             <label htmlFor="title">Title</label>
             <input
+              className="blog-input"
               type="text"
               name="title"
               id="title"
@@ -106,9 +114,10 @@ class EditBlog extends React.Component {
 
             <label htmlFor="description">Blog Post</label>
             <textarea
+              className="blog-input"
               type="text"
-              name="title"
-              id="title"
+              name="description"
+              id="description"
               onChange={this.onInputChange}
               cols="30"
               rows="10"
@@ -117,7 +126,8 @@ class EditBlog extends React.Component {
 
             <label htmlFor="image">Add an Image</label>
             <input
-              type="file"
+              className="blog-input"
+              type="text"
               name="image"
               id="image"
               onChange={this.onInputChange}
@@ -126,6 +136,7 @@ class EditBlog extends React.Component {
 
             <label htmlFor="city">City</label>
             <input
+              className="blog-input"
               type="text"
               name="city"
               id="city"
@@ -135,15 +146,17 @@ class EditBlog extends React.Component {
 
             <label htmlFor="prefecture">Prefecture</label>
             <input
+              className="blog-input"
               type="text"
               name="prefecture"
               id="prefecture"
               onChange={this.onInputChange}
               value={prefecture}
             />
-            <hr></hr>
+            <hr />
             <label htmlFor="tipOne">Tip 1</label>
-            <textarea
+            <input
+              className="blog-input"
               type="text"
               name="tipOne"
               id="tipOne"
@@ -151,10 +164,11 @@ class EditBlog extends React.Component {
               cols="30"
               rows="10"
               value={tipOne}
-            ></textarea>
+            />
 
             <label htmlFor="tipTwo">Tip 2</label>
-            <textarea
+            <input
+              className="blog-input"
               type="text"
               name="tipTwo"
               id="tipTwo"
@@ -162,10 +176,11 @@ class EditBlog extends React.Component {
               cols="30"
               rows="10"
               value={tipTwo}
-            ></textarea>
+            />
 
             <label htmlFor="tipThree">Tip 3</label>
-            <textarea
+            <input
+              className="blog-input"
               type="text"
               name="tipThree"
               id="tipThree"
@@ -173,11 +188,11 @@ class EditBlog extends React.Component {
               cols="30"
               rows="10"
               value={tipThree}
-            ></textarea>
-
+            />
+            <br/>
             <input type="submit" value="Submit" />
           </form>
-          <button onClick={this.props.history.goBack}>Back</button>
+          <button className="back" onClick={this.props.history.goBack}>Back</button>
         </div>
       )
     );
