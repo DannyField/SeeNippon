@@ -5,7 +5,11 @@ class Blogs extends React.Component {
   state = { blogs: [] };
 
   getBlogs = async () => {
-    const response = await fetch("http://localhost:3000/blogs/");
+    const response = await fetch("http://localhost:3000/blogs/", {
+      headers: {
+        'Authorization': `Bearer ${localStorage.getItem('token')}`
+      }
+    });
     const data = await response.json();
     this.setState({ blogs: data });
     console.log(this.state);
@@ -15,12 +19,12 @@ class Blogs extends React.Component {
     return this.state.blogs.map((blogs, index) => {
       return (
         <div key={index}>
-          <p>Prefecture</p>
-          <h1>{blogs.title}</h1>
+          <h3>{blogs.title}</h3>
           <p>{blogs.city}</p>
           <Link to={{ pathname: `/blogs/${blogs.id}`, state: blogs }}>
             <button>Show</button>
           </Link>
+          <hr />
         </div>
       );
     });

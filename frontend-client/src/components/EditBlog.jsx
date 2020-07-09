@@ -37,6 +37,7 @@ class EditBlog extends React.Component {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
+        'Authorization': `Bearer ${localStorage.getItem('token')}`
       },
       body: JSON.stringify({
         title,
@@ -49,12 +50,17 @@ class EditBlog extends React.Component {
         tipThree,
       }),
     });
+    window.alert("Blog Details Updated")
     this.props.history.push("/blogs");
   };
 
   async componentDidMount() {
     const { id } = this.state;
-    const response = await fetch(`http://localhost:3000/blogs/${id}`);
+    const response = await fetch(`http://localhost:3000/blogs/${id}`, {
+      headers: {
+        'Authorization': `Bearer ${localStorage.getItem('token')}`
+      },
+    });
     const {
       title,
       description,
@@ -107,8 +113,8 @@ class EditBlog extends React.Component {
             <label htmlFor="description">Blog Post</label>
             <textarea
               type="text"
-              name="title"
-              id="title"
+              name="description"
+              id="description"
               onChange={this.onInputChange}
               cols="30"
               rows="10"
@@ -117,7 +123,7 @@ class EditBlog extends React.Component {
 
             <label htmlFor="image">Add an Image</label>
             <input
-              type="file"
+              type="text"
               name="image"
               id="image"
               onChange={this.onInputChange}
