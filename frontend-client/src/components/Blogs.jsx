@@ -22,7 +22,7 @@ class Blogs extends React.Component {
         <div className="blog-index" key={index}>
           <Link to={{ pathname: `/blogs/${blogs.id}`, state: blogs }}>          
           <h3 className="blog-index-title">{blogs.title}</h3>
-          <p>City: {blogs.city} | Prefecture: {blogs.prefecture}</p>
+          <p>City: {blogs.city}</p>
           <img className="index-image" src={blogs.image} alt="blog post photograph"/>
           </Link>
         </div>

@@ -1,5 +1,5 @@
 import React from "react";
-// import "./stylesheets/Card.css";
+import "../stylesheets/Card.css";
 
 class Card extends React.Component {
 
@@ -34,5 +34,4 @@ class Card extends React.Component {
     }
   }
 }
-
 export default Card;

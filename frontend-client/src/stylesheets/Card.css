@@ -1,6 +1,37 @@
 .card {
-  background-color: brown;
-  width: 200px;
-  height: 200px;
+  width: 100vw;
+  height: 500px;
   text-align: justify;
+  background-color: brown;
+  margin: 0px auto;
+  padding: 0px auto;
+}
+
+body {
+  margin: 0px;
+  /* Light white for background color But not needed*/
+  /* background-color: whitesmoke; */
+}
+
+.JapanInfo {
+  font-size: 16px;
+  width: 600px;
+  text-align: justify;
+  padding-top: 5px;
+  margin-left: 70px;
+  text-shadow: black;
+  position: absolute;
+  left: 19%;
+  transform: translateX(-50%);
+  animation-name: slide-from-left;
+  animation-duration: 3s;
+}
+
+@keyframes slide-from-left {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 19%;
+  }
 }
