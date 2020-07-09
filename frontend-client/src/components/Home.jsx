@@ -2,60 +2,51 @@ import React from "react";
 
 import '../stylesheets/Home.css'
 
-export default function Home() {
-  const items = document.querySelectorAll('.slider-item');
-const itemCount = items.length;
-const nextItem = document.querySelector('.next');
-const previousItem = document.querySelector('.previous');
-const navItem = document.querySelector('a.toggle-nav');
-let count = 0;
+class Home extends React.Component{
 
-function showNextItem() {
-  items[count].classList.remove('active');
+  constructor(){
+    super()
 
-  if(count < itemCount - 1) {
-    count++;
-  } else {
-    count = 0;
+    this.onClickForward = this.onClickForward.bind(this)
+    this.onClickBack = this.onClickBack.bind(this)
+
+    const img0 = require("../img/seenippon_fig3.jpg");
+    const img1 = require("../img/seenippon_fig4.jpg");
+    const img2 = require("../img/SeeNipponFig1.jpg");
+    const img3 = require("../img/SeenipponFig2.jpg");
+    const img4 = require("../img/landing_page_img.jpg")
+
+    this.state={
+      index: 0,
+      imgList: [img0, img1, img2, img3, img4]
+      }
   }
 
-  items[count].classList.add('active');
-  console.log(count);
-}
-
-function showPreviousItem() {
-  items[count].classList.remove('active');
-
-  if(count > 0) {
-    count--;
-  } else {
-    count = itemCount - 1;
+  onClickForward(){
+    if (this.state.index + 1 === this.state.imgList.length){
+      this.setState({
+        index: 0
+      })
+    }else{
+      this.setState({
+        index: this.state.index + 1
+      })
+    }
   }
 
-  items[count].classList.add('active');
-  // Check if working...
-  console.log(count);
-}
-
-function toggleNavigation(){
-  this.nextElementSibling.classList.toggle('active');
-}
-
-function keyPress(e) {
-  e = e || window.event;
-  
-  if (e.keyCode == '37') {
-    showPreviousItem();
-  } else if (e.keyCode == '39') {
-    showNextItem();
+  onClickBack(){
+    if (this.state.index - 1 === -1){
+      this.setState({
+        index: this.state.imgList.length - 1
+      })
+    }else{
+      this.setState({
+        index: this.state.index - 1
+      })
+    }
   }
-}
 
-// nextItem.addEventListener('click', showNextItem);
-// previousItem.addEventListener('click', showPreviousItem);
-document.addEventListener('keydown', keyPress);
-// navItem.addEventListener('click', toggleNavigation);
-  return (
+  render(){return (
 
     // <div>
     <div className="intro-section">
@@ -74,7 +65,7 @@ document.addEventListener('keydown', keyPress);
                   </div>
                   <div className="column-xs-12 column-md-10">
                     <div className="image-holder">
-                      <img src="landing_page_img.jpg" />
+                      <img src={this.state.imgList[this.state.index]} alt="" />
                     </div>
                     <div className="grid">
                       <div className="column-xs-12 column-md-9">
@@ -89,93 +80,17 @@ document.addEventListener('keydown', keyPress);
                   </div>
                 </div>
               </li>
-              <li className="slider-item">
-                <div className="grid vertical">
-                  <div className="column-xs-12 column-md-2 hide-mobile">
-                    <div className="intro">
-                      <a href="#">
-                        <h1 className="title"><span className="underline">Konnichiwa!</span></h1>
-                      </a>
-                    </div>
-                  </div>
-                  <div className="column-xs-12 column-md-10">
-                    <div className="image-holder">
-                      <img src="seenippon_fig3.jpg" />
-                    </div>
-                    <div className="grid">
-                      <div className="column-xs-12 column-md-9">
-                        <div className="intro show-mobile">
-                          <a href="#">
-                            <h1 className="title"><span className="underline">Konnichiwa!</span></h1>
-                          </a>
-                        </div>
-                        <p className="description">Kyoto is famous for its numerous classical Buddhist temples, gardens, imperial palaces, Shinto shrines and traditional wooden houses.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li className="slider-item">
-                <div className="grid vertical">
-                  <div className="column-xs-12 column-md-2 hide-mobile">
-                    <div className="intro">
-                      <a href="#">
-                        <h1 className="title"><span className="underline">Explore Osaka</span></h1>
-                      </a>
-                    </div>
-                  </div>
-                  <div className="column-xs-12 column-md-10">
-                    <div className="image-holder">
-                      <img src="seenippon_fig4.jpg" />
-                    </div>
-                    <div className="grid">
-                      <div className="column-xs-12 column-md-9">
-                        <div className="intro show-mobile">
-                          <a href="#">
-                            <h1 className="title"><span className="underline">Explore Osaka</span></h1>
-                          </a>
-                        </div>
-                        <p className="description">Osaka is a large port city and commercial center known for its modern architecture, nightlife and hearty street food.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li className="slider-item">
-                <div className="grid vertical">
-                  <div className="column-xs-12 column-md-2 hide-mobile">
-                    <div className="intro">
-                      <a href="#">
-                        <h1 className="title"><span className="underline">Explore Hokkaido</span></h1>
-                      </a>
-                    </div>
-                  </div>
-                  <div className="column-xs-12 column-md-10">
-                    <div className="image-holder">
-                      <img src="seenippon_fig5.jpg" />
-                    </div>
-                    <div className="grid">
-                      <div className="column-xs-12 column-md-9">
-                        <div className="intro show-mobile">
-                          <a href="#">
-                            <h1 className="title"><span className="underline">Explore Hokkaido</span></h1>
-                          </a>
-                        </div>
-                        <p className="description">Hokkaido, the northernmost of Japan’s main islands, is known for its volcanoes, natural hot springs ("onsen") and ski areas.</p>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </li>
             </ul>
             <div className="grid">
               <div className="column-xs-12">
                 <div className="controls">
-                  <button className="previous">
-                    <i className="ion-ios-arrow-thin-left"></i>
+                  <button className="previous" onClick = {this.onClickBack} >
+                    {/* <i className="ion-ios-arrow-thin-left"></i> */}
+                    ←
                     </button>
-                  <button className="next" >
-                    <i className="ion-ios-arrow-thin-right"></i>
+                  <button className="next" onClick={this.onClickForward}>
+                    {/* <i className="ion-ios-arrow-thin-right"></i> */}
+                    →
                   </button>
                 </div>
               </div>
@@ -188,5 +103,7 @@ document.addEventListener('keydown', keyPress);
           {/* <div className="top-left">Blog title</div>
       </div>*/}
     </div>
-  );
+  );}
 }
+
+export default Home;
