@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Card from "./Card";
 import '../stylesheets/BlogIndex.css';
 
 class Blogs extends React.Component {
@@ -34,6 +35,7 @@ class Blogs extends React.Component {
     return (
       <div className="blog-index-container">
         {this.renderBlogs()}
+        <Card />
       </div>
     );
   }
