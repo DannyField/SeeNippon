@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  resources :blogs
-
   post "/login", to: "user_token#create"
+  post "/sign-up", to: "users#create"
   get "/status", to: "status#index"
   get "/status/user", to: "status#user"
-  post "/sign-up", to: "users#create"
+  resources :blogs
+
 end
