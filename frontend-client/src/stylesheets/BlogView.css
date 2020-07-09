@@ -2,3 +2,8 @@
   height: 490px;
   width: 100%;
 }
+
+button.edit-back-delete-button {
+  margin: 20px;
+  padding-top: 5px;
+}
