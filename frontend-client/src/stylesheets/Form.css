@@ -1,12 +1,15 @@
-/* Feel free to destroy this  */
 .form_container {
   max-width: 700px;
   margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 form {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 form label {
@@ -15,13 +18,26 @@ form label {
 
 form input {
   height: 30px;
-}
-
-form input[input="submit"] {
-  margin: 20px 0px;
+  width: 450px;
 }
 
 form textarea {
-  resize: none;
-  height: 100px;
+  /* resize: none; */
+  height: 80px;
+}
+
+.form-container-blog {
+
+}
+
+.blog-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.blog-input {
+  width: 450px;
+  text-align: center;
+  font-family: 'Open Sans Condensed', sans-serif;
 }

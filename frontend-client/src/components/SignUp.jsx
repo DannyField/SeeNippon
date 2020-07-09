@@ -46,9 +46,10 @@ class SignUp extends React.Component {
     const { email, password } = this.state;
     return (
       <div className="form-container">
-        <h1>Sign Up</h1>
         <form onSubmit={this.onFormSubmit}>
-          <label htmlFor="email">Email</label>
+        <h1>Sign Up</h1>
+        <br/>
+          <label htmlFor="email">Email Address:</label>
           <input
             type="email"
             name="email"
@@ -56,7 +57,7 @@ class SignUp extends React.Component {
             value={email}
             onChange={this.onInputChange}
           />
-          <label htmlFor="password">Password</label>
+          <label htmlFor="password">Password:</label>
           <input
             type="password"
             name="password"
@@ -64,6 +65,7 @@ class SignUp extends React.Component {
             value={password}
             onChange={this.onInputChange}
           />
+          <br/>
           <input type="submit" value="Submit" />
         </form>
       </div>
