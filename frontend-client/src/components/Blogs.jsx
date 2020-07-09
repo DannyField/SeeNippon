@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Card from "./Card";
+import '../stylesheets/BlogIndex.css';
 
 class Blogs extends React.Component {
   state = { blogs: [] };
