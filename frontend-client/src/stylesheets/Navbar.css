@@ -1,4 +1,4 @@
-nav {
+/* nav {
   padding: 20px;
   border: 1px solid black;
 }
@@ -7,4 +7,33 @@ nav a {
   text-decoration: none;
   color: cornflowerblue;
   margin: 0px 10px;
-}
+} */
+
+  .toggle-nav {
+    display: none;
+  }
+
+  .flex-nav ul {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    padding: 0;
+    justify-content: flex-end;
+  }
+
+  nav {
+    padding: 1.75rem 0 1.75rem 0;
+  }
+  nav ul {
+    line-height: 2.2;
+    display: flex;
+    justify-content: flex-start;
+  }
+  nav ul li {
+    font-size: 1rem;
+    text-transform: uppercase;
+    margin: 0 2rem 0 0;
+  }
+  nav ul li:nth-child(6) {
+    margin: 0;
+  }

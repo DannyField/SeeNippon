@@ -22,13 +22,13 @@ img {
   background-position: center;
   background-size: cover;
   width: 100vw;
-  height: 65vw;
+  height: 50vw;
 }
 
 /* Top left text */
 .top-left {
-  position: absolute;
-  top: 220px;
+  position: relative;
+  top: 10vw;
   left: 50px;
   font-size: 1.5em;
 }
