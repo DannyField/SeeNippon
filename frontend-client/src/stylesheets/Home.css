@@ -1,4 +1,4 @@
-.landing-page-text {
+/* .landing-page-text {
   margin-top: 8px;
   display:flex;
   flex-direction: column;
@@ -20,10 +20,10 @@ h1 {
   height: 50vw;
 }
 
-/* Top left text */
+
 .top-left {
   position: relative;
   top: 10vw;
   left: 50px;
   font-size: 1.5em;
-}
+} */
