@@ -1,4 +1,5 @@
 import React from "react";
+import Card from "./Card";
 
 import '../stylesheets/Home.css'
 
@@ -104,6 +105,7 @@ class Home extends React.Component{
         {/* <img src="landing_page_img.jpg" alt="landing_page_img" style={{width: '100vw', height: '65vw'}}/> */}
           {/* <div className="top-left">Blog title</div>
       </div>*/}
+    <Card />
     </div>
   );}
 }
