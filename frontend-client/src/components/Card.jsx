@@ -1,5 +1,5 @@
 import React from "react";
-// import "./stylesheets/Card.css";
+import "../stylesheets/Card.css";
 
 class Card extends React.Component {
 
@@ -32,7 +32,31 @@ class Card extends React.Component {
         </div>
       );
     }
+    return (
+      <div className="card">
+        <div className="JapanInfo">
+          <h1>Come to the land of the rising sun!</h1>
+          <p>
+            Enjoy sake with the locals. Visit the shrines hidden away in lush
+            landscapes
+          </p>
+          <br></br>
+          <p>
+            Japan is an island country in East Asia located in the northwest
+            Pacific Ocean. It borders the Sea of Japan to the west, and it
+            extends from the Sea of Okhotsk in the north to the East China Sea
+            and Taiwan in the south
+          </p>
+          <br></br>
+          <p>
+            Japan Airlines is the national carrier and offers daily cheap
+            flights to Tokyo and Osaka from Sydney. Other airlines that operate
+            flights to Japan are: China Southern, Air Asia, Qantas, Thai Airways
+            and Jetstar.
+          </p>
+        </div>
+      </div>
+    );
   }
 }
-
 export default Card;
