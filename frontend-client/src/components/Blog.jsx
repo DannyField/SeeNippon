@@ -19,7 +19,7 @@ class Blog extends React.Component {
     const b = this.props.location.state;
     console.log(this.props);
     return (
-      <div>
+      <div className="blog-view">
         <h1>{b.title}</h1>
         <h2>Prefecture: {b.prefecture}</h2>
         <h3>City: {b.city}</h3>

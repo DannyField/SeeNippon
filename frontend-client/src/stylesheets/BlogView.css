@@ -1,9 +1,13 @@
 .blog-post-img {
-  height: 490px;
+  max-height: 490px;
   width: 100%;
 }
 
 button.edit-back-delete-button {
   margin: 20px;
   padding-top: 5px;
+}
+
+.blog-view {
+  margin: 0 15px;
 }
