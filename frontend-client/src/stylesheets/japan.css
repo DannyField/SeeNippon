@@ -644,6 +644,10 @@ width: 75px;
 height: 30px;
 }
 
+button:hover {
+  cursor: pointer;
+}
+
 .controls {
   position: relative;
   z-index: 1;

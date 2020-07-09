@@ -10,15 +10,17 @@ class Home extends React.Component{
     this.onClickForward = this.onClickForward.bind(this)
     this.onClickBack = this.onClickBack.bind(this)
 
-    const img0 = require("../img/seenippon_fig3.jpg");
-    const img1 = require("../img/seenippon_fig4.jpg");
+    const img0 = require("../img/fuji.jpg");
+    const img1 = require("../img/girls.jpg");
     const img2 = require("../img/SeeNipponFig1.jpg");
     const img3 = require("../img/SeenipponFig2.jpg");
-    const img4 = require("../img/landing_page_img.jpg")
+    const img4 = require("../img/tokyotower.jpg")
+
+    const img5 = require("../img/landing_page_img.jpg")
 
     this.state={
       index: 0,
-      imgList: [img0, img1, img2, img3, img4]
+      imgList: [img0, img1, img2, img3, img4, img5]
       }
   }
 
