@@ -1,5 +1,5 @@
 import React from "react";
-// import "./stylesheets/Card.css";
+import "../stylesheets/Card.css";
 
 class Card extends React.Component {
   state = { weather: [] };
@@ -21,36 +21,44 @@ class Card extends React.Component {
   }
 
   render() {
-    const weather = this.state?.weather;
-    console.log(weather);
+    // const weather = this.state?.weather;
+    // console.log(weather);
     return (
       <div className="card">
-        {weather &&
-          weather.map((weather, index) => {
-            return <p>{weather.current}</p>;
-          })}
+        <div className="JapanInfo">
+          <h1>Come to the land of the rising sun!</h1>
+          <p>
+            Enjoy sake with the locals. Visit the shrines hidden away in lush
+            landscapes
+          </p>
+          <br></br>
+          <p>
+            Japan is an island country in East Asia located in the northwest
+            Pacific Ocean. It borders the Sea of Japan to the west, and it
+            extends from the Sea of Okhotsk in the north to the East China Sea
+            and Taiwan in the south
+          </p>
+          <br></br>
+          <p>
+            Japan Airlines is the national carrier and offers daily cheap
+            flights to Tokyo and Osaka from Sydney. Other airlines that operate
+            flights to Japan are: China Southern, Air Asia, Qantas, Thai Airways
+            and Jetstar.
+          </p>
+        </div>
+        {/* <p>{weather.current}</p>; */}
       </div>
     );
   }
 }
-
 export default Card;
 
-// render() {
-//     const countries = this.state?.countries;
-//     return (
-//       <div className="App">
-//         <p>250 Countries with their Flags!</p>
-//       {countries &&
-//       countries.map((country, index) => {
-//         return (
-//         <Country key={index}
-//         name={country.name}
-//         flag={country.flag}
-//         />
-//       );
-//       })}
-//       </div>
-//     );
-//   }
-// }
+/* <div className="card">
+<h1>About Japan Here</h1>
+<p>
+  Japan is an amazing place to visit. Drink sake with the locals. Visit
+  the many shires hidden among lush landscapes.
+</p>
+{/* <p>{this.state?.weather}</p> */
+
+// </div> */}
