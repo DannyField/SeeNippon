@@ -6,25 +6,35 @@ class CreateBlog extends React.Component {
     this.setState({
       [event.target.id]: event.target.value,
     });
+    console.log(this.state)
+    console.log(this.props)
+    console.log(this.body)
   };
 
   onFormSubmit = async (event) => {
     event.preventDefault();
 
+    const body = {
+      blog: this.state
+    }
+
     await fetch("http://localhost:3000/blogs", {
       method: "POST",
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': 'application/json',
         'Authorization': `Bearer ${localStorage.getItem('token')}`
       },
-      body: JSON.stringify({ blog: this.state }),
+      body: JSON.stringify(body),
     });
     this.props.history.push("/blogs");
   };
 
   render() {
+    console.log(this.state)
+    console.log(localStorage.getItem('token'))
     return (
       <div className="form-container">
+        <h1>Add A Blog Post & Tips:</h1>
         <form onSubmit={this.onFormSubmit}>
           <label htmlFor="title">Title</label>
           <input
@@ -78,7 +88,7 @@ class CreateBlog extends React.Component {
             id="tipThree"
             onChange={this.onInputChange}
           ></textarea>
-          <input type="submit" value="Submit" />
+          <input type="submit" value="Add Entry" />
         </form>
       </div>
     );

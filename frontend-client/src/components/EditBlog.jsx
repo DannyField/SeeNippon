@@ -113,8 +113,8 @@ class EditBlog extends React.Component {
             <label htmlFor="description">Blog Post</label>
             <textarea
               type="text"
-              name="title"
-              id="title"
+              name="description"
+              id="description"
               onChange={this.onInputChange}
               cols="30"
               rows="10"
@@ -123,7 +123,7 @@ class EditBlog extends React.Component {
 
             <label htmlFor="image">Add an Image</label>
             <input
-              type="file"
+              type="text"
               name="image"
               id="image"
               onChange={this.onInputChange}
