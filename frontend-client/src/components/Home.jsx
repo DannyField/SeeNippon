@@ -1,4 +1,5 @@
 import React from "react";
+import Card from "./Card";
 
 export default function Home() {
   return (
@@ -8,6 +9,7 @@ export default function Home() {
         See Nippon! is the site to go to when you want to find information out
         about Japan!
       </p>
+      {/* <Card /> */}
     </div>
   );
 }

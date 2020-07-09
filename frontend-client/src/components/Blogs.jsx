@@ -20,6 +20,7 @@ class Blogs extends React.Component {
           <p>{blogs.city}</p>
           <Link to={{ pathname: `/blogs/${blogs.id}`, state: blogs }}>
             <button>Show</button>
+            <p>{blogs.image}</p>
           </Link>
         </div>
       );
