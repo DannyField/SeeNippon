@@ -18,6 +18,7 @@ class SignUp extends React.Component {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          'Authorization': `Bearer ${localStorage.getItem('token')}`
         },
         body: JSON.stringify({ user: { email, password } }),
       });
@@ -28,6 +29,7 @@ class SignUp extends React.Component {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
+            'Authorization': `Bearer ${localStorage.getItem('token')}`  
           },
           body: JSON.stringify({ auth: { email, password } }),
         });
