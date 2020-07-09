@@ -5,8 +5,11 @@ class Blog extends React.Component {
   deleteBlog = async (id) => {
     await fetch(`http://localhost:3000/blogs/${id}`, {
       method: "DELETE",
+      headers: {
+        'Authorization': `Bearer ${localStorage.getItem('token')}`
+      },
     });
-    window.alert("Deleted The Post! Why!!");
+    window.alert("Deleted The Post!");
     this.props.history.push("/blogs");
   };
 
@@ -20,7 +23,6 @@ class Blog extends React.Component {
         <h2>{b.prefecture} prefecture</h2>
         <p>{b.description}</p>
         <img src={b.image} alt="blog post photograph"/>
-        <h1>{b.image}</h1>
 
         <button onClick={this.props.history.goBack}>Back</button>
         <Link to={`/blogs/${b.id}/edit`}>

@@ -15,6 +15,7 @@ class CreateBlog extends React.Component {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        'Authorization': `Bearer ${localStorage.getItem('token')}`
       },
       body: JSON.stringify({ blog: this.state }),
     });
@@ -38,8 +39,9 @@ class CreateBlog extends React.Component {
             id="description"
             onChange={this.onInputChange}
           ></textarea>
+          <label htmlFor="Photo">Photo</label>
           <input
-            type="file"
+            type="text"
             name="image"
             id="image"
             onChange={this.onInputChange}

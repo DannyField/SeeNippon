@@ -37,6 +37,7 @@ class EditBlog extends React.Component {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
+        'Authorization': `Bearer ${localStorage.getItem('token')}`
       },
       body: JSON.stringify({
         title,
@@ -49,12 +50,17 @@ class EditBlog extends React.Component {
         tipThree,
       }),
     });
+    window.alert("Blog Details Updated")
     this.props.history.push("/blogs");
   };
 
   async componentDidMount() {
     const { id } = this.state;
-    const response = await fetch(`http://localhost:3000/blogs/${id}`);
+    const response = await fetch(`http://localhost:3000/blogs/${id}`, {
+      headers: {
+        'Authorization': `Bearer ${localStorage.getItem('token')}`
+      },
+    });
     const {
       title,
       description,
