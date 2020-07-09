@@ -1,8 +1,10 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
-class Navbar extends React.Component {
-  render() {
+const Navbar = () => {
+  const history = useHistory();
+
+  // render() {
     return (
       <nav className="navbar">
         <Link to="/">Home</Link>
@@ -10,9 +12,17 @@ class Navbar extends React.Component {
         <Link to="/blogs/create">Create A Blog</Link>
         <Link to="/login">Login</Link>
         <Link to="/sign-up">Sign Up</Link>
+        <span
+          onClick={() => {
+            localStorage.removeItem("token");
+            history.push("/login");
+          }}
+        >
+          Logout
+        </span>
       </nav>
     );
   }
-}
+// }
 
 export default Navbar;

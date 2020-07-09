@@ -21,6 +21,7 @@ class Login extends React.Component {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
+          // "Authorization": `Bearer ${localStorage.getItem('token')}`
         },
         body: JSON.stringify(body),
       });
@@ -29,7 +30,7 @@ class Login extends React.Component {
       } else {
         const { jwt } = await response.json();
         localStorage.setItem("token", jwt);
-        this.props.history.push("/home");
+        this.props.history.push("/");
       }
     } catch (err) {
       this.setState({
