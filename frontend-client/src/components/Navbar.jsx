@@ -19,10 +19,10 @@ const Navbar = () => {
               <a href="#" className="toggle-nav">Menu <i className="ion-navicon-round"></i></a>
               <ul>
                 <li><Link className="link" to="/">Home</Link></li>
-                <li><Link to="/blogs">All Blogs</Link></li>
-                <li><Link to="/blogs/create">Create</Link></li>
-                <li><Link to="/login">Login</Link></li>
-                <li><Link to="/sign-up">Sign Up</Link></li>
+                <li><Link className="link" to="/blogs">All Blogs</Link></li>
+                <li><Link className="link" to="/blogs/create">Create</Link></li>
+                <li><Link className="link" to="/login">Login</Link></li>
+                <li><Link className="link" to="/sign-up">Sign Up</Link></li>
                 <li><span onClick={() => {localStorage.removeItem("token");
                 history.push("/login");}}>Logout</span></li>
               </ul>
