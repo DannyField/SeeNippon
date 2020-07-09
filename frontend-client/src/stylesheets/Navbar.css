@@ -40,3 +40,7 @@ nav ul li:nth-child(6) {
 
 /* To make sure the logout link has cursor too  */
 li { cursor: pointer; }
+
+.edit-back-delete button { 
+  padding: 20px;
+}
