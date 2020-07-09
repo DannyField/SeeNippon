@@ -19,13 +19,11 @@ class Blogs extends React.Component {
     return this.state.blogs.map((blogs, index) => {
       return (
         <div className="blog-index" key={index}>
-          <h3>{blogs.title}</h3>
-          <p>{blogs.city}</p>
+          <Link to={{ pathname: `/blogs/${blogs.id}`, state: blogs }}>          
+          <h3 className="blog-index-title">{blogs.title}</h3>
+          <p>City: {blogs.city} | Prefecture: {blogs.prefecture}</p>
           <img className="index-image" src={blogs.image} alt="blog post photograph"/>
-          <Link to={{ pathname: `/blogs/${blogs.id}`, state: blogs }}>
-            <button>Show</button>
           </Link>
-          <hr />
         </div>
       );
     });
@@ -33,8 +31,7 @@ class Blogs extends React.Component {
 
   render() {
     return (
-      <div>
-        {/* <h1>Handy Tips!</h1> */}
+      <div className="blog-index-container">
         {this.renderBlogs()}
       </div>
     );
