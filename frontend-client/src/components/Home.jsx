@@ -1,4 +1,5 @@
 import React from "react";
+
 import '../stylesheets/Home.css'
 
 export default function Home() {
@@ -55,6 +56,7 @@ function keyPress(e) {
 document.addEventListener('keydown', keyPress);
 // navItem.addEventListener('click', toggleNavigation);
   return (
+
     // <div>
     <div className="intro-section">
       <div className="japan-container">
