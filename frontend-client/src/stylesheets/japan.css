@@ -1,11 +1,19 @@
 /* 12columns.css | Created by Katherine Kato | Released under the MIT license */
 /* GitHub: https://kathykato.github.io/12columns/ */
 @import url("https://fonts.googleapis.com/css?family=Barlow:400,500,700");
-.container {
+/* .container {
   margin: auto;
   padding: 0 1rem;
   max-width: 71.25rem;
   width: 100%;
+} */
+
+.japan-container {
+  margin: auto;
+  padding: 0 1rem;
+  max-width: 78rem;
+  width: 100%;
+  height: 100vh;
 }
 
 .grid {
@@ -588,8 +596,12 @@ nav ul li {
 
 img {
   width: 100%;
-  height: 43vh;
+  height: 40vh;
   object-fit: cover;
+}
+
+.front-img{
+  height: 42vh
 }
 
 .vertical {
@@ -776,6 +788,9 @@ button:hover {
     background: #fff;
   }
 
+  .front-img {
+    height: 62vh;
+  }
   img {
     height: 60vh;
   }

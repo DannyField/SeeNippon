@@ -68,7 +68,7 @@ class Home extends React.Component{
                   </div>
                   <div className="column-xs-12 column-md-10">
                     <div className="image-holder">
-                      <img src={this.state.imgList[this.state.index]} alt="" />
+                      <img className="front-img" src={this.state.imgList[this.state.index]} alt="" />
                     </div>
                     <div className="grid">
                       <div className="column-xs-12 column-md-9">
