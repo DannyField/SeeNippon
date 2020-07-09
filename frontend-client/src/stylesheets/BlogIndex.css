@@ -1,0 +1,22 @@
+.blog-index-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.blog-index {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  padding: 20px;
+  box-shadow: 1px 1px 5px;
+  text-align: center;
+}
+
+.index-image {
+  height: 200px; 
+  max-width: 500px; 
+  border-radius: 2px;
+  box-shadow: 1px 1px 5px;
+}
