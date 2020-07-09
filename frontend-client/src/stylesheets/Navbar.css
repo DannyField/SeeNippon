@@ -1,0 +1,10 @@
+nav {
+  padding: 20px;
+  border: 1px solid black;
+}
+
+nav a {
+  text-decoration: none;
+  color: cornflowerblue;
+  margin: 0px 10px;
+}
