@@ -37,3 +37,11 @@ nav a {
   nav ul li:nth-child(6) {
     margin: 0;
   }
+
+.link {
+  color: #8d8d8d;
+  text-decoration: none;
+}
+.link:hover {
+  color: #232323;
+}

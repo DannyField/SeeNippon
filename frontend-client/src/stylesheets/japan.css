@@ -829,7 +829,7 @@ button {
     text-transform: uppercase;
     margin: 0 2rem 0 0;
   }
-  nav ul li:nth-child(3) {
+  nav ul li:nth-child(6) {
     margin: 0;
   }
 }
