@@ -1,7 +1,7 @@
 import React from "react";
 import Card from "./Card";
 
-import '../stylesheets/Home.css'
+// import '../stylesheets/Home.css'
 
 class Home extends React.Component{
 
