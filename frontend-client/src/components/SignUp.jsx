@@ -45,7 +45,7 @@ class SignUp extends React.Component {
   render() {
     const { email, password } = this.state;
     return (
-      <div className="form-container">
+      <div className="form-container" style={{height:"82vh"}}>
         <form onSubmit={this.onFormSubmit}>
         <h1>Sign Up</h1>
         <br/>

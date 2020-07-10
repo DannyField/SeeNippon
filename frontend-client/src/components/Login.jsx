@@ -42,7 +42,7 @@ class Login extends React.Component {
   render() {
     const { email, password, errMessage } = this.state;
     return (
-      <div className="form-container">
+      <div className="form-container" style={{height:"82vh"}}>
         {errMessage && <span>{errMessage}</span>}
         <form onSubmit={this.onFormSubmit}>
         <h1>Login</h1>
