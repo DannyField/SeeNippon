@@ -38,14 +38,12 @@ class Card extends React.Component {
               Enjoy sake with the locals. Visit the shrines hidden away in lush
               landscapes
             </p>
-            <br></br>
             <p>
               Japan is an island country in East Asia located in the northwest
               Pacific Ocean. It borders the Sea of Japan to the west, and it
               extends from the Sea of Okhotsk in the north to the East China Sea
               and Taiwan in the south
             </p>
-            <br></br>
             <p>
               Japan Airlines is the national carrier and offers daily cheap
               flights to Tokyo and Osaka from Sydney. Other airlines that
@@ -55,13 +53,13 @@ class Card extends React.Component {
           </div>
           <div className="weather-Container">
             <h3>Current Weather in Tokyo:</h3>
-            <>
+            <div className="icon_container">
               <img
                 className="weather-icon"
                 src={this.state.iconStr}
                 alt="weather icon"
               />
-            </>
+            </div>
             <p> Current Temperature: {this.state.currentTemp}</p>
             <p> | Precipitation: {this.state.precip}</p>
             <p> | Humidity: {this.state.humidity}</p>
