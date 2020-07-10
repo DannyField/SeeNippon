@@ -1,0 +1,21 @@
+footer {
+  margin-top: 15px;
+  height: 50px;
+  background-color: gray;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+}
+
+.footer-name {
+  height: 50px;
+
+}
+
+
+.footer-text {
+  color:white;
+  margin-left: 10px;
+  font-size: 0.9em;
+}

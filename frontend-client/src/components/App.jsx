@@ -10,7 +10,7 @@ import NoMatch from "./NoMatch";
 import ProtectedRoutes from "./ProtectedRoutes";
 import Login from "./Login";
 import SignUp from "./SignUp";
-import japan from "../stylesheets/japan"
+import Footer from "./footer"
 
 class App extends React.Component {
   render() {
@@ -26,8 +26,8 @@ class App extends React.Component {
           <Route exact path="/sign-up" component={SignUp} />
           <Route exact path="/" component={Home} />
           <Route component={NoMatch} />
-          <script src={japan}></script>
         </Switch>
+        <Footer />
       </>
     );
   }
