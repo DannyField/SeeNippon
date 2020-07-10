@@ -1,5 +1,5 @@
 footer {
-  margin-top: 15px;
+  margin-top: 0px;
   height: 50px;
   background-color: gray;
   display: flex;
@@ -12,7 +12,6 @@ footer {
   height: 50px;
 
 }
-
 
 .footer-text {
   color:white;
