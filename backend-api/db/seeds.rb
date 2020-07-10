@@ -45,7 +45,7 @@ Blog.create(
     
     image: "https://i.ibb.co/rf4yr41/Kamakura-beach.jpg",
     city: 'Kamakura', 
-    prefecture: 'Yokohama', 
+    prefecture: 'Kanagawa 神奈川', 
     tipOne: 'Make sure to get a phone SIM before arriving in Japan', 
     tipTwo: 'Learning some basic Japanese will make travelling much easier', 
     tipThree: 'Look for the small coffee shop on the corner. Has nice brewed coffee',
@@ -59,7 +59,7 @@ Blog.create(
     
     image: "https://i.ibb.co/Hr3j0vj/Kamakura.jpg", 
     city: 'Kamakura', 
-    prefecture: 'Kanagawa', 
+    prefecture: 'Kanagawa 神奈川', 
     tipOne: 'There are no buses along the melody road so find a local to take you there', 
     tipTwo: 'Learning some basic Japanese will make travelling much easier', 
     tipThree: "Watch out for the naughty goat on the mountain and don't let him inside",
@@ -73,7 +73,7 @@ Blog.create(
 
     image: "https://i.ibb.co/K7syvP6/Nara.jpg", 
     city: 'Nara', 
-    prefecture: 'Nara', 
+    prefecture: 'Nara 奈良', 
     tipOne: 'Watch out for men and women wanting to buy you drinks', 
     tipTwo: 'Learning some basic Japanese will make travelling much easier', 
     tipThree: 'If you visit the deer at Nara, bow and they may bow back to you',
@@ -87,7 +87,7 @@ Blog.create(
     
     image: "https://i.ibb.co/hFKBCZF/Nakano.jpg", 
     city: 'Nakano', 
-    prefecture: 'Tokyo', 
+    prefecture: "Tokyo 東京", 
     tipOne: 'Go to Nakano for cheap camera gear', 
     tipTwo: "Don't forget to get a JR Rail Pass", 
     tipThree: "Sometimes resturants will close for a few hours after lunch",
