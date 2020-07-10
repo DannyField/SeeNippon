@@ -1,4 +1,5 @@
 import React from "react";
+import "../stylesheets/login.css"
 
 class Login extends React.Component {
   state = { email: "", password: "", errMessage: "" };
@@ -43,12 +44,16 @@ class Login extends React.Component {
   render() {
     const { email, password, errMessage } = this.state;
     return (
-      <div className="form-container" style={{height:"82vh"}}>
+      <div className="form-container login-form" style={{height:"82vh"}}>
+        {/* <div className="image-container">
+          <img id="login-image" src="seenippon_fig3.jpg" alt="login-image"/>
+        </div> */}
+        <div id="loginform-wrapper">
         {errMessage && <span>{errMessage}</span>}
-        <form onSubmit={this.onFormSubmit}>
-        <h1>Login</h1>
+        <form className="loginform"onSubmit={this.onFormSubmit}>
+        <h1 className="login-h1">Login</h1>
         <br/>
-          <label htmlFor="email">Email Address:</label>
+          <label className="login-label" htmlFor="email">Email Address:</label>
           <input
             type="email"
             name="email"
@@ -56,7 +61,7 @@ class Login extends React.Component {
             value={email}
             onChange={this.onInputChange}
           />
-          <label htmlFor="password">Password</label>
+          <label className="login-label" htmlFor="password">Password</label>
           <input
             type="password"
             name="password"
@@ -67,6 +72,7 @@ class Login extends React.Component {
           <br/>
           <input type="submit" value="Submit" />
         </form>
+        </div>
       </div>
     );
   }
