@@ -7,7 +7,7 @@ class Footer extends React.Component{
     <>
     <footer>
     <div className="footer-name">
-      <p className="footer-text">Made with ❤<i class="fas"></i> &copy; See Nippon team</p>
+      <p className="footer-text">Made with ❤<i className="fas"></i> &copy; See Nippon team</p>
     </div>
   </footer>
     </>

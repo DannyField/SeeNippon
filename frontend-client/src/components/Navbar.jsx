@@ -25,7 +25,8 @@ const Navbar = () => {
                 {/* <li><Link className="link" to="/login">Login</Link></li>
                 <li><Link className="link" to="/sign-up">Sign Up</Link></li> */}
                 <li><span onClick={() => {localStorage.removeItem("token");
-                history.push("/login");}}>Logout</span></li>
+                history.push("/"); window.location.reload();
+              }}>Logout</span></li>
               </ul>
             </div>
           </div>
