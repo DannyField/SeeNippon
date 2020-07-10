@@ -1,31 +1,35 @@
-.card {
-  width: 100vw;
-  height: 500px;
-  text-align: justify;
-  background-color: brown;
-  margin: 0px auto;
-  padding: 0px auto;
-}
-
 body {
   margin: 0px;
-  /* Light white for background color But not needed*/
-  /* background-color: whitesmoke; */
+}
+
+.card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
+  width: 100vw;
+  /* height: 550px; */
+  background-image: url("../img/RED_1.png");
+  background-repeat: none;
+  overflow: hidden;
+  opacity: 0.9;
+  background-color: brown;
 }
 
 .JapanInfo {
-  font-size: 16px;
+  align-self: auto;
+  font-size: 24px;
   width: 600px;
-  text-align: justify;
-  padding-top: 5px;
-  margin-left: 70px;
-  text-shadow: black;
-  position: absolute;
-  left: 19%;
-  transform: translateX(-50%);
-  animation-name: slide-from-left;
-  animation-duration: 3s;
+  margin-top: 40px;
+  /* left: 10%; */
+  /* animation-name: slide-from-left; */
+  /* animation-duration: 3s; */
   color: whitesmoke;
+  /* color: black; */
+  line-height: 27px;
+  text-align: justify;
 }
 
 @keyframes slide-from-left {
@@ -33,24 +37,65 @@ body {
     left: 100%;
   }
   to {
-    left: 19%;
+    left: 10%;
   }
 }
 
-.weather-Container {
-  font-size: 24px;
-  width: 600px;
-  text-align: right;
-  padding-top: 30px;
-  margin-left: 980px;
-  text-shadow: black;
-  position: absolute;
+/* WEATHER CONTAINER STYLING HERE */
 
+.weather-Container {
   color: whitesmoke;
+  text-align: justify;
+  font-size: 24px;
+  /* text-shadow: black; */
+  color: whitesmoke;
+  /* color: black; */
+  /* line-height: 20px; */
 }
 
-@media (min-width: 48rem) {
+.weather-Container p {
+  color: whitesmoke;
+  /* color: black; */
+  display: inline;
+}
+
+.weather-Container h3 {
+  text-align: center;
+}
+
+.weather-Container img {
+  /* display: inline; */
+  border: black;
+}
+
+.weather-icon {
+  width: 60px;
+  height: 60px;
+}
+
+/* MOBILE FRIENDLY SETTINGS */
+
+@media all and (max-width: 850px) {
+  .card {
+    /* flex-direction: column; */
+  }
+
   .JapanInfo {
-    /* font-size: 12px; */
+    font-size: 14px;
+    line-height: 14px;
+    color: black;
+    padding: 0px;
+    margin: 0px;
+  }
+
+  .weather-Container {
+    font-size: 12px;
+    line-height: 12px;
+    color: black;
+  }
+}
+
+@media all and (max-width: 568px) {
+   {
   }
 }

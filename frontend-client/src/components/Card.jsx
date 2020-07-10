@@ -11,12 +11,15 @@ class Card extends React.Component {
     let precip = JSON.stringify(data.current.precip);
     let humidity = JSON.stringify(data.current.humidity);
     let uvIndex = JSON.stringify(data.current.uv_index);
+    let icon = JSON.stringify(data.current.weather_icons[0]);
+    let iconStr = icon.substring(1, icon.length - 1);
     this.setState({
       weather: data,
       currentTemp: currentTemp,
       precip: precip,
       humidity: humidity,
       uvIndex: uvIndex,
+      iconStr: iconStr,
     });
     // console.log(this.state);
   }
@@ -52,10 +55,19 @@ class Card extends React.Component {
           </div>
           <div className="weather-Container">
             <h3>Current Weather in Tokyo:</h3>
-            <p>Current Temperature: {this.state.currentTemp}</p>
-            <p>Precipitation: {this.state.precip}</p>
-            <p>Humidity: {this.state.humidity}</p>
-            <p>UV Index: {this.state.uvIndex}</p>
+            <>
+              <img
+                className="weather-icon"
+                src={this.state.iconStr}
+                alt="weather icon"
+              />
+            </>
+            <p> Current Temperature: {this.state.currentTemp}</p>
+            <p> | Precipitation: {this.state.precip}</p>
+            <p> | Humidity: {this.state.humidity}</p>
+            <p> | UV Index: {this.state.uvIndex}</p>
+            <br></br>
+            <br></br>
           </div>
         </div>
       );
