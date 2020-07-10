@@ -61,7 +61,7 @@ class Login extends React.Component {
             value={email}
             onChange={this.onInputChange}
           />
-          <label className="login-label" htmlFor="password">Password</label>
+          <label className="login-label" htmlFor="password">Password:</label>
           <input
             type="password"
             name="password"
