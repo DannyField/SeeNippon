@@ -33,7 +33,7 @@ class CreateBlog extends React.Component {
     console.log(this.state)
     console.log(localStorage.getItem('token'))
     return (
-      <div className="form-container-blog">
+      <div className="form-container-blog" style={{margin:"0 0 35px 0"}}>
         <form className="blog-form" onSubmit={this.onFormSubmit}>
         <h1>Add A Blog Post & Tips:</h1>
           <label htmlFor="title">Title:</label>
