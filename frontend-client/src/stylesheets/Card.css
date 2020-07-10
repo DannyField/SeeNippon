@@ -25,6 +25,7 @@ body {
   transform: translateX(-50%);
   animation-name: slide-from-left;
   animation-duration: 3s;
+  color: whitesmoke;
 }
 
 @keyframes slide-from-left {
@@ -33,5 +34,23 @@ body {
   }
   to {
     left: 19%;
+  }
+}
+
+.weather-Container {
+  font-size: 24px;
+  width: 600px;
+  text-align: right;
+  padding-top: 30px;
+  margin-left: 980px;
+  text-shadow: black;
+  position: absolute;
+
+  color: whitesmoke;
+}
+
+@media (min-width: 48rem) {
+  .JapanInfo {
+    /* font-size: 12px; */
   }
 }
